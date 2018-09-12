@@ -7,12 +7,23 @@
   data-publishable-key="AMiMrsGcv9U5.s9f0hG3WR1nd.52290bdb02091113a1da9fc9591725217f7b568eaeda95e53186a8f56d9192cd">
 </script>
 <script>
+var hints = {
+  "prefill": {
+    "firstName": "Test",
+    "lastName": "Bolt",
+    "email": "integration@bolt.com",
+    "phone": "1111111111",
+    "addressLine1": "288 7th Street",
+    "city": "San Francisco",
+    "state": "California",
+    "zip": "94103",
+    "country": "US"
+  }
+};
 var initializeBolt = function() {
     BoltCheckout.configure(
-        {orderToken: "511df248321711a8b1383a86bfcc963e9fce0cbf0ff51dd5619d1098160a3b9f"},
-        {prefill: {
-            
-        }}
+        {orderToken: "9c5ce8a916e12d1ec69df70736f065c8d92f57dfdbedefc33d5539d311b18f60"},
+        hints
     ).open();
 }
 
