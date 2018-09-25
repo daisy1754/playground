@@ -1,0 +1,35 @@
+<html>
+<head>
+<script
+  id="bolt-connect"
+  type="text/javascript"
+  src="https://connect-sandbox.bolt.com/connect.js"
+  data-publishable-key="AMiMrsGcv9U5.6oZyHGdYXa4F.0503dcdd295cddc1a930d643818d316cfb0c9c1d04f322368ba9fb14a8d00b1d	">
+</script>
+<script>
+var hints = {
+  "prefill": {
+    "firstName": "Test",
+    "lastName": "Bolt",
+    "email": "integration@bolt.com",
+    "phone": "1111111111",
+  }
+};
+var initializeBolt = function() {
+    BoltCheckout.configure(
+        {orderToken: "44618374e0221c33d5c0f315d6b8abfc46665a898698bd1a9e6e64fa8bbf7708"},
+        hints
+    ).open();
+}
+
+if (window.addEventListener) {
+    window.addEventListener("load", initializeBolt, false);
+} else if (window.attachEvent) {
+    window.attachEvent("onload", initializeBolt);
+} else {
+    window.onload = initializeBolt;
+}
+</script>
+</head>
+<body></body>
+</html>
